@@ -1,9 +1,9 @@
 
-import { judgeIsVertical,  styleObjectToCss } from "./utils";
+import { judgeIsVertical,  styleObjectToCss } from "./utils.js";
 
 import {  getConfirmStyle, applyPlacementModifier,setConfirmBeforeBorderStyle } from "./style.js"
-import { reactive } from "./stores";
-import { defaultConfig } from "./config";
+import { reactive } from "./stores.js";
+import { defaultConfig } from "./config.js";
 
 export function createBtn(value) {
     const btn = document.createElement("button");
