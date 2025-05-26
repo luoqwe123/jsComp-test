@@ -1,0 +1,113 @@
+.xida-button {
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #606266;
+
+    cursor: pointer;
+    border: 1px solid #dcdfe6;
+
+    &:hover {
+        border: 1px solid rgb(197.7, 225.9, 255);
+        color: #409eff;
+        background-color: rgb(235.9, 245.3, 255);
+    }
+
+    &:active {
+        border: 1px solid #409eff;
+    }
+}
+
+.my-popconfirm {
+    margin-top: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.confirm-box {
+    width: 100px;
+    padding: 10px;
+    position: absolute;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    // transform: translateX(25%);
+    // transform: translateY(-100%);
+    // box-sizing: border-box;
+    .confirm-container {
+        border: 1px solid #ebeef5;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // gap: 3px;
+        color: #606266;
+
+
+
+        .confirm-question {
+            width: 80%;
+            white-space: wrap;
+            /* 允许换行 */
+            height: auto;
+            font-size: 12px;
+            // line-height: 4px;
+            // overflow-wrap: break-word; ///* 确保长单词也能换行 */
+        }
+        .confirm-control-area{
+            display: flex;
+            gap: 3px;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 24px;
+
+        }
+        .control-btn{
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            height: 20px;
+            display: flex;
+           
+        } 
+        .confirm-control-no{
+            color: #606266;
+            &:hover{
+                background-color:  #e0e0e0; 
+            }
+        }
+        .confirm-control-yes{
+            background-color: #409eff;
+            color: white;
+            &:hover{
+                background-color: #79bbff;
+            }
+        }
+    }
+
+}
+// &::before {
+        //     content: '';
+        //     border-left: 5px solid transparent;
+        //     border-top: 10px solid transparent;
+        //     border-right: 5px solid transparent;
+        //     border-bottom: 10px solid white;
+        //     position: absolute;
+        //     bottom: 50%;
+        //     right: 5%;
+        //     z-index: 99;
+        //     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        //     /* 尖角阴影 */
+        // }
