@@ -42,4 +42,4 @@ echo "所有文件夹已创建并初始化完成！"
 echo "你可以使用 'code .' 在 VSCode 中打开项目"
 
 
-## 使用： 在终端输入   chmod +x setup-projects.sh  ./setup-projects.sh frontend backend api  能够创建 frontend backend api  文件
+## 使用： 在终端输入   chmod +x setup.sh  ./setup.sh frontend backend api  能够创建 frontend backend api  文件

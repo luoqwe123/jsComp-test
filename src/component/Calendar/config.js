@@ -1,0 +1,15 @@
+
+
+
+export const DAYSNUM = 42;
+
+
+export const weekDay = [
+    "日",
+    "一",
+    "二",
+    "三",
+    "四",
+    "五",
+    "六",
+]

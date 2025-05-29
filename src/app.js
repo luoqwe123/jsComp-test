@@ -1,12 +1,12 @@
-// import MyCalendar from "./component/Calendar/index.js"
+import MyCalendar from "./component/Calendar/index.js"
 
 import MyPopconfrim from "./component/PopConfirm/index.js"
 
 
 ;(() => {
-    // MyCalendar("#app", null, (date) => {
-    //     console.log(date)
-    // });
+    MyCalendar("#app", null, (date) => {
+        console.log(date)
+    });
     MyPopconfrim("#app", "top-start", 'top', "why asdfsda fs adsfd safsd", {
         yes: (data) => {
             console.log(data)

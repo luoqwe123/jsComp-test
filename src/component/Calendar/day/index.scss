@@ -1,0 +1,53 @@
+.date-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    .date-thead {
+        font-size: 14px;
+        border-bottom: 2px solid #ebeef5;
+        th{
+            padding: 5px 0px;
+        }
+
+    }
+
+    .date-tbody {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .date-td {
+        cursor: pointer;
+        text-align: center;
+        width: 32px;
+        height: 26px;
+        &.other-month{
+            color: #a8abb2;
+        }
+        &.this-month:hover:not(.current){
+            color: #55a9ff;
+        }
+        &.current {
+            color: orange;
+        }
+    }
+}
+
+.day-control-box {
+    
+    width: 100%;
+    margin-bottom: 5px;
+    .day-control-title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .control-btn{
+            background-color: white;
+            border: none;
+            color: #808285;
+            cursor: pointer;
+            
+        }
+    }
+}

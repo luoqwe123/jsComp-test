@@ -1,4 +1,4 @@
-import { ALLOWED_FLAGS, getFlag, setFlag } from "./store";
+import { ALLOWED_FLAGS, getFlag, setFlag } from "./store.js";
 
 let track = null;
 
@@ -33,8 +33,8 @@ function handlerClick(...args) {
         return;
     }
    
-
-
+    
+   
     switch (flag) {
         case ALLOWED_FLAGS.YEAR:
             yearControlClick(className, dateInfo)
@@ -54,17 +54,19 @@ function handlerClick(...args) {
 function dateControlClick(className, dateInfo) { 
 
     switch (className) {
-        case "control-btn btn-year-lt":
+        case "control-btn control-year-lt":
             dateInfo.year -= 1;
             break;
-        case "control-btn btn-month-lt":
-            dateInfo.month > 1 && (dateInfo.month -= 1);
+        case "control-btn control-month-lt":
+          
+            dateInfo.month > 1 && (dateInfo.month -=  1);
+            
             break;
 
-        case "control-btn btn-year-gt":
+        case "control-btn control-year-gt":
             dateInfo.year += 1;
             break;
-        case "control-btn btn-month-gt":
+        case "control-btn control-month-gt":
             dateInfo.month < 12 && (dateInfo.month += 1);
             break;
         default:
