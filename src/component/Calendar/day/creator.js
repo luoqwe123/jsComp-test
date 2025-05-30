@@ -83,8 +83,8 @@ export function createControTitle (year,month){
                 <button class="control-btn control-month-lt">&lt;</button>
             </div>
             <div class="control-title">
-                <span class="title-year-cn"> <span class="title-year">${year}</span>年</span>
-                <span class="title-month-cn"> <span class="title-month">${month}</span>月</span>
+                <span class="show-title title-year-cn"> <span class="title-year">${year}</span>年</span>
+                <span class="show-title title-month-cn"> <span class="title-month">${month}</span>月</span>
             </div>
             <div class="control-gt">
                 <button class="control-btn control-month-gt">&gt;</button>
