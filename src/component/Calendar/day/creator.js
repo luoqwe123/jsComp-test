@@ -1,6 +1,8 @@
 
 import { weekDay, DAYSNUM } from "../config";
-import {  getDate, getShowDay } from "../utils";
+import {  getDateInfo,  } from "../utils";
+import { getShowDay  } from "./utils"
+
 
 export function createThead() {
     const oThead = document.createElement("thead");
@@ -14,7 +16,7 @@ export function createThead() {
 }
 
 export function createTd(year, month, days) {
-    const date = getDate();
+    const date = getDateInfo();
     const currentDay = date.day;
     const currentMonth = date.month;
     const currentYear = date.year;
@@ -43,23 +45,28 @@ function createTbody(year,month) {
     
     const oTbody = document.createElement("tbody");
     oTbody.className = "date-tbody";
-    createTrs(year,month,oTbody);
+    const oTrs =  createTrs(year,month,(oTr)=>{
+        oTbody.appendChild(oTr);
+    });
     return oTbody;
 
 }
-export function createTrs (year,month,oTbody){
+export function createTrs (year,month,handler){
     const days = getShowDay(year,month);
     const num = Math.ceil(DAYSNUM / 7);
     const oTds = createTd(year,month,days);
     let index = 0;
+    const res = [];
     for (let i = 0; i < num; i++) {
         const oTr = document.createElement("tr");
         oTr.className = "date-tr";
         for (let j = 0; j < 7; j++) {
             oTr.appendChild(oTds[index++]);
         }
-        oTbody.appendChild(oTr);
+        res.push(oTr);
+        handler && handler(oTr)
     }
+    return res;
 }
 
 

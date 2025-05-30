@@ -1,0 +1,50 @@
+.my-year-calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+    .date-tr {
+        height: 36px;
+        width: 100%;
+    }
+
+    .date-tbody {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .year.decade-year {
+        cursor: pointer;
+        text-align: center;
+        width: 32px;
+        height: 26px;
+        
+        &:hover:not(.current) {
+            color: #55a9ff;
+        }
+        &.current {
+            color: orange;
+        }
+    }
+}
+
+.year-control-area {
+    width: 100%;
+    margin-bottom: 5px;
+
+    border-bottom: 2px solid #ebeef5;
+
+    display: flex;
+    justify-content: space-around;
+
+    .control-show:hover {
+        color: orange;
+        cursor: pointer;
+    }
+
+    .year-control-btn {
+        background-color: white;
+        border: none;
+        color: #808285;
+        cursor: pointer;
+    }
+
+}

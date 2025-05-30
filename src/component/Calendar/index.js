@@ -1,6 +1,5 @@
 import { render } from "./day/render";
-import { getDate } from "./utils";
-import  event from "./event"
+import  event from "./event";
 import { reactive } from "./store";
 
 import "./index.scss";

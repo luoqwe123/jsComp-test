@@ -4,7 +4,7 @@ import { createControTitle, createTable, createTrs } from "./creator";
 import "./index.scss"
 
 export function render (container,year,month){
-   
+    container.innerHTML = "";
     const oTabel = createTable(year,month);
     const oControlBox = createControTitle(year,month);
     container.appendChild(oControlBox);
@@ -18,5 +18,7 @@ export function update(year,month){
     const oTbody = document.querySelector(".date-tbody");
 
     oTbody.innerHTML = "";
-    createTrs(year,month,oTbody);
+    createTrs(year,month,(oTr)=>{
+        oTbody.appendChild(oTr);
+    });
 }

@@ -14,6 +14,7 @@ function handlerClick(...args) {
     const className = target.className;
     const flag = getFlag();
     if (className.includes("current-day")) {
+        
         handlerDateClick(target, handler);
         return;
     }
@@ -21,7 +22,7 @@ function handlerClick(...args) {
         handlerYearClick(container, target, dateInfo);
         return;
     }
-    if(className === "static-month"){
+    if(className.includes("static-month")){
         handlerMonthClick(container,target,dateInfo)
     }
     if (className === 'title-year') {
@@ -75,6 +76,7 @@ function dateControlClick(className, dateInfo) {
 }
 
 function titleYearClick(container, dateInfo) {
+   
     setFlag(ALLOWED_FLAGS.YEAR, container, dateInfo);
 }
 function titleMonthClick (container,dateInfo){
@@ -82,8 +84,10 @@ function titleMonthClick (container,dateInfo){
 }
 
 function yearControlClick(className, dateInfo) {
+
     switch (className) {
         case "year-control-btn btn-year-lt":
+            
             dateInfo.year -= 10;
             break;
         case "year-control-btn btn-year-gt":
