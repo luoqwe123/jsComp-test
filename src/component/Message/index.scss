@@ -1,0 +1,90 @@
+.message-container {
+    position: absolute;
+    display: flex;
+    width: auto;
+    height: auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #f4f4f5;
+    transition: top 0.25s ease;
+    & .icon-box {
+        width: auto;
+        height: auto;
+        display: flex;
+        padding-top: 3px;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .message-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 400px;
+        flex-wrap: wrap;
+
+        &.primary {
+            color: #409eff;
+        }
+
+        &.warn {
+            color: #e6a23c;
+        }
+
+        &.error {
+            color: #f56c6c;
+        }
+
+        &.success {
+            color: #67c23a;
+        }
+    }
+
+    .close-btn {
+        border: none;
+        background-color: inherit;
+        color: #909399;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+.message-show {
+    top: 10px;
+    left: 50%;
+    animation: .25s linear message-show;
+    transform: translateY(0%);
+    @keyframes message-show {
+        from {
+            // top: 0px;
+            transform: translateY(-100%);
+        }
+
+        to {
+            // top: 10px;
+            transform: translateY(0%);
+        }
+    }
+}
+
+.message-close {
+
+    
+    animation: .25s linear message-close;
+    top: 0px;
+    left: 50%;
+    transform: translateY(-100%);
+    @keyframes message-close {
+        from {
+            // top: 10px;
+            transform: translateY(0%);
+        }
+
+        to {
+            // top: 0px;
+            transform: translateY(-100%);
+        }
+    }
+}
