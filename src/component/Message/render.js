@@ -30,8 +30,6 @@ export function render(content, showClose, type, distance) {
 export function close(instance, distance) {
     const { oMessage } = instance;
     oMessage.className = oMessage.className.replace("message-show", "message-close");
-
-    
     setTimeout(() => {
         const area = oMessage.offsetHeight + distance;
         oMessage.remove();
@@ -46,13 +44,9 @@ export function close(instance, distance) {
 
 function updatePlacement(removeArea, removeIndex) {
     for (let i = removeIndex; i < instances.length; i++) {
-        
         if (instances[i]) {
             const newTop = instances[i].oMessage.offsetTop - removeArea;
             instances[i].oMessage.style.top = newTop + 'px';// 某个属性变化可以使用过渡来增加动的效果（从旧值（因为其他元素的影响导致需要改变的）到新值），动画（从设定的值（为了动画而设置的）到最终的值）
-            
-           
-        }
-        
+        }    
     }
 }

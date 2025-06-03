@@ -1,6 +1,6 @@
 
 import { render,close } from "./render";
-
+import event from "./event";
 
 //  给每个没消失的message 设置唯一表示，以便为后面的message设置top 
 
@@ -15,4 +15,5 @@ export default function  (options,handler){
     distance = distance ? distance : 10;
     const instance = render(content,showClose,type,distance);
     let timer = setTimeout(close.bind(null,instance,distance),delay);
+    event(instance,distance,timer);
 }

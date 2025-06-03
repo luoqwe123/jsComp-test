@@ -1,9 +1,10 @@
 import MyCalendar from "./component/Calendar/index.js"
 
 import MyPopconfrim from "./component/PopConfirm/index.js"
+import event from "./event.js";
+import MyMessage from "./component//Message/index.js";
 
-
-;(() => {
+; (() => {
     MyCalendar("#app", null, (date) => {
         console.log(date)
     });
@@ -15,30 +16,36 @@ import MyPopconfrim from "./component/PopConfirm/index.js"
             console.log(data)
         }
     })
-    MyPopconfrim("#app", "left-end", 'left', "why asdfsda fs adsfd safsd", {
-        yes: (data) => {
-            console.log(data)
-        },
-        no: (data) => {
-            console.log(data)
-        }
-    })
-    MyPopconfrim("#app", "right", 'right', "why asdfsda fs adsfd safsd", {
-        yes: (data) => {
-            console.log(data)
-        },
-        no: (data) => {
-            console.log(data)
-        }
-    })
-    MyPopconfrim("#app", "bottom", 'bottom', "why asdfsda fs adsfd safsd", {
-        yes: (data) => {
-            console.log(data)
-        },
-        no: (data) => {
-            console.log(data)
-        }
-    })
+    // MyPopconfrim("#app", "left-end", 'left', "why asdfsda fs adsfd safsd", {
+    //     yes: (data) => {
+    //         console.log(data)
+    //     },
+    //     no: (data) => {
+    //         console.log(data)
+    //     }
+    // })
+    // MyPopconfrim("#app", "right", 'right', "why asdfsda fs adsfd safsd", {
+    //     yes: (data) => {
+    //         console.log(data)
+    //     },
+    //     no: (data) => {
+    //         console.log(data)
+    //     }
+    // })
+    // MyPopconfrim("#app", "bottom", 'bottom', "why asdfsda fs adsfd safsd", {
+    //     yes: (data) => {
+    //         console.log(data)
+    //     },
+    //     no: (data) => {
+    //         console.log(data)
+    //     }
+    // })
+    // MyMessage({
+    //     content: "success",
+    //     showClose: true,
+    //     type: "primary"
+    // })
+    event(".show-message-btn")
 })()
 
 
