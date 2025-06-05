@@ -1,0 +1,14 @@
+{
+  
+  "include": [
+    "vite.config.*",
+  ],
+  "compilerOptions": {
+    "noEmit": true,  //noEmit 是 TypeScript 编译选项，设置为 true 时，告诉编译器（tsc）不要生成 JavaScript 输出文件。让tsc 只检查代码是否有类型错误，但不生成实际的 JavaScript 文件
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",//指定 TypeScript 增量编译（Incremental Compilation）的缓存文件路径。让 TypeScript 把缓存信息存到这个文件。
+
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "types": ["node"]//诉 TypeScript 编译器（tsc）加载 Node.js 的类型定义（如 process、fs 等）。
+  }
+}

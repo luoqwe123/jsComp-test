@@ -1,8 +1,8 @@
-import MyCalendar from "./component/Calendar/index.js"
+import MyCalendar from "./component/Calendar/index"
 
-import MyPopconfrim from "./component/PopConfirm/index.js"
-import event from "./event.js";
-import MyMessage from "./component//Message/index.js";
+import MyPopconfrim from "./component/PopConfirm/index"
+import event from "./event";
+
 
 ; (() => {
     MyCalendar("#app", null, (date) => {
