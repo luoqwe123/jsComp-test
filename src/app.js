@@ -2,12 +2,13 @@ import MyCalendar from "./component/Calendar/index"
 
 import MyPopconfrim from "./component/PopConfirm/index"
 import event from "./event";
-
+import MyWaterMark from "./component/WaterMark/index"
 
 ; (() => {
     MyCalendar("#app", null, (date) => {
         console.log(date)
     });
+    MyWaterMark("#app");
     MyPopconfrim("#app", "top-start", 'top', "why asdfsda fs adsfd safsd", {
         yes: (data) => {
             console.log(data)
