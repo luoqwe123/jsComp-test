@@ -1,0 +1,22 @@
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+}
+.infinite-list {
+    width: 40%;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    list-style: none;
+    padding: 0;
+}
+.item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    
+}
+.item:last-child {
+    border-bottom: none;
+}
