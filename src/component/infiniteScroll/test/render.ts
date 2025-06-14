@@ -9,6 +9,7 @@ export function render(oApp: Element, register: Function) {
     function load() {
         itemCount += 6;
         const oUl  = oContainer.children[0];
+        let arr = [];
         oUl.innerHTML = '';
         for (let i = 0; i < itemCount; i++) {
             const div = document.createElement('div');

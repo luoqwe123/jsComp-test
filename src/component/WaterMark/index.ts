@@ -1,10 +1,10 @@
 
 import { getElement } from "../utils";
-import { defaultOptions } from "./config";
+import { defaultOptions,defaultNode } from "./config";
 import { Options } from "./types";
 import { render } from "./render";
 
-export default function (val:string,options:Options = defaultOptions,insertNode:Element){
+export default function (val:string,options:Options = defaultOptions,insertNode:Element = defaultNode()){
     const oApp = getElement(val);
     const oContainer = document.createElement("div");
     oContainer.className = 'my-WaterMark';

@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const els = document.querySelectorAll("[xida-infinite-scroll]");
     console.log(els);
     els.forEach((item, index) => {
-        const delay = item?.getAttribute("infinite-scroll-delay");
-        const distance = item?.getAttribute("infinite-scroll-distance");
-        const immediate = item?.getAttribute("infinite-scroll-immediate") === "true"; 
+        const delay = item?.getAttribute("infinite-scroll-delay") || "200";
+        const distance = item?.getAttribute("infinite-scroll-distance") || "0";
+        const immediate = item?.getAttribute("infinite-scroll-immediate") === "true" || true; 
 
         const callbackName = item?.getAttribute("xida-infinite-scroll")!;
         const handler = getCallback(callbackName);

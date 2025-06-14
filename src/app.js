@@ -1,8 +1,10 @@
 import MyCalendar from "./component/Calendar/index"
-
+import { getElement } from "./component/utils";
 import MyPopconfrim from "./component/PopConfirm/index"
 import event from "./event";
 import MyWaterMark from "./component/WaterMark/index"
+import  { registerCallback } from  './component/infiniteScroll/index';
+import   { render } from "./component//infiniteScroll/test/render"
 
 ; (() => {
     MyCalendar("#app", null, (date) => {
@@ -46,7 +48,10 @@ import MyWaterMark from "./component/WaterMark/index"
     //     showClose: true,
     //     type: "primary"
     // })
-    event(".show-message-btn")
+    event(".show-message-btn");
+    render(getElement("#app"),registerCallback); // 使用方法与element-plus差不多，由于没有使用vue框架，需要自己创建子元素
+    
+    
 })()
 
 

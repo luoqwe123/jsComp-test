@@ -21,3 +21,12 @@ export const defaultOptions: Options = {
         textBaseline: "top"
     }
 };
+
+
+
+
+export const defaultNode = ():Element=>{
+    const oP  = document.createElement('p');
+    oP.textContent = "这是我的水印组件";
+    return oP;
+}
